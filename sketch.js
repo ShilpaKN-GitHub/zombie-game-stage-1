@@ -62,11 +62,8 @@ function draw() {
 
   if(zombieGroup.isTouching(player)) {
     lifeBar.width -= 5;
+    text("Life: " + lifeBar.width, player.x, player.y - 250);
   }
-
-  console.log(lifeBar.width);
-
-  text("Life: " + lifeBar.width, player.x, player.y - 250);
 
   if(player.isTouching(edge3)) {
     player.scale = 0.3;
